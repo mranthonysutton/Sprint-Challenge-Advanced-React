@@ -3,15 +3,21 @@ import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 import App from "./App";
 import Players from "./Component/Players";
+import DarkModeToggler from "./Component/DarkModeToggler";
 import axios from "axios";
 
-it("renders without crashing", () => {
+test("renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
-// test("renders mapped data by testing for the 'searches' keyword", () => {
-//   const container = render(<App />);
-//   container.getAllByText("Alex");
-// });
+test("Women's World Cup is being rendered", () => {
+  const container = render(<Players />);
+  container.getByText("Women's World Cup");
+});
+
+test("Dark mode is being rendered", () => {
+  const container = render(<DarkModeToggler />);
+  container.getByText("Dark Mode:");
+});

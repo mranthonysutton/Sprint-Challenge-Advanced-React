@@ -27,15 +27,18 @@ class Players extends Component {
 
   render() {
     return (
-      <div className="player-container">
-        {this.state.playerData.map(player => (
-          <div className="player-card" key={player.id}>
-            <h1>{player.name}</h1>
-            <h3>{player.country}</h3>
-            <p>Searches: {player.searches}</p>
-          </div>
-        ))}
-      </div>
+      <>
+        <h1>Women's World Cup</h1>
+        <div className="player-container">
+          {this.state.playerData.map(player => (
+            <div className="player-card" key={player.id}>
+              <h1>{player.name}</h1>
+              <h3>{player.country}</h3>
+              <p>Searches: {player.searches}</p>
+            </div>
+          ))}
+        </div>
+      </>
     );
   }
 }

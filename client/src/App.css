@@ -34,7 +34,7 @@
   border: 1px solid black;
   height: 20px;
   position: relative;
-  margin: 2% auto;
+  margin: 0.5% auto;
   width: 40px;
 }
 
@@ -59,4 +59,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dark-mode-container {
+  margin: 1% 0 !important;
 }
