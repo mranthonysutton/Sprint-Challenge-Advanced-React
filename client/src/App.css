@@ -28,30 +28,6 @@
   color: #fff;
 }
 
-.dark-mode__toggle {
-  background: papayawhip;
-  border-radius: 50px;
-  border: 1px solid black;
-  height: 20px;
-  position: relative;
-  margin: 0.5% auto;
-  width: 40px;
-}
-
-.toggle {
-  background: #f68819;
-  border-radius: 50px;
-  height: 18px;
-  left: 0;
-  position: absolute;
-  transition: 0.2s;
-  width: 20px;
-}
-
-.toggled {
-  left: 18px;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -62,5 +38,5 @@
 }
 
 .dark-mode-container {
-  margin: 1% 0 !important;
+  margin: 1% 0 0 0;
 }

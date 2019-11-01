@@ -16,8 +16,3 @@ test("Women's World Cup is being rendered", () => {
   const container = render(<Players />);
   container.getByText("Women's World Cup");
 });
-
-test("Dark mode is being rendered", () => {
-  const container = render(<DarkModeToggler />);
-  container.getByText("Dark Mode:");
-});
