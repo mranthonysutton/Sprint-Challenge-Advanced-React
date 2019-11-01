@@ -2,15 +2,27 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Players extends Component {
+  // isMounted is initially set to fale -- https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component
+  _isMounted = false;
   state = { playerData: [] };
+
   componentDidMount() {
+    // When component mounts, set the boolean to true, and only when this is true can the axios call run
+    this._isMounted = true;
     axios
       .get("http://localhost:5000/api/players")
       .then(response => {
-        this.setState({ playerData: response.data });
-        console.log(this.state.playerData);
+        if (this._isMounted) {
+          this.setState({ playerData: response.data });
+          //   console.log(this.state.playerData);
+        }
       })
       .catch(error => console.log(error));
+  }
+
+  componentWillUnmount() {
+    // When it unmounts, no longer allows the axios to run
+    this._isMounted = false;
   }
 
   render() {

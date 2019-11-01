@@ -11,7 +11,7 @@ it("renders without crashing", () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test("renders mapped data by testing for the 'searches' keyword", () => {
-  const container = render(<App />);
-  container.getAllByText("Alex");
-});
+// test("renders mapped data by testing for the 'searches' keyword", () => {
+//   const container = render(<App />);
+//   container.getAllByText("Alex");
+// });
